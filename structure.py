@@ -8,7 +8,7 @@ from griptape.tools import DateTimeTool
 
 def setup_cloud_listener():
     # Are we running in a managed environment?
-    if "GRIPTAPE_API_KEY" in os.environ:
+    if "GT_CLOUD_STRUCTURE_RUN_ID" in os.environ:
         # If so, the runtime takes care of loading the .env file
         EventBus.add_event_listener(
             EventListener(
